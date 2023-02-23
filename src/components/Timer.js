@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../App.css';
 import useGenerateRandomColor from "./useGenerateRandomColor";
+import getValues from "./ColorBars";
 import ColorBars from "./ColorBars";
 
 const Timer = ({ sec }) => {
@@ -9,11 +10,11 @@ const Timer = ({ sec }) => {
     const [seconds, setSeconds] = useState(sec);
     const [active, setActive] = useState(false);
     const { color, generateColor } = useGenerateRandomColor();
+    const { guessColor, generateGuess } = getValues();
 
     const tick = () => {
         if (seconds > 0) {
             setSeconds(seconds => seconds - 1);
-            console.log(seconds);
         }
         else {
             clearInterval(current);
@@ -24,13 +25,6 @@ const Timer = ({ sec }) => {
 
     const startTimer = () => {
         setActive(true);
-        // const current = setInterval(() => {
-        //     if (current > 0) {
-        //         tick();
-        //     } else {
-        //         return () => clearInterval(current);
-        //     }
-        // }, 1000);
     }
 
     const resetTimer = () => {
@@ -40,6 +34,7 @@ const Timer = ({ sec }) => {
 
     React.useEffect(() => {
         if (active) {
+            generateGuess();
             const current = setInterval(() => tick(), 1000);
             return () => clearInterval(current);
         } else {
@@ -51,7 +46,12 @@ const Timer = ({ sec }) => {
         return (
             <div className="counter">
                 <p>{`${seconds} sec`}</p>
-                <button className="startBtn" onClick={startTimer}>Start</button>
+                <button className="startBtn" onClick={() => {
+                    startTimer();
+                    generateColor();
+                }}>
+                    Start
+                </button>
             </div>
         );
     } else {
@@ -76,8 +76,17 @@ const Timer = ({ sec }) => {
                         Reset
                     </button>
 
+
                 </div>
-                
+                <div
+                    id="guess"
+                    style={{
+                        backgroundColor: guessColor
+                    }}
+                >
+                    <ColorBars />
+                </div>
+
             </div>
         );
     }

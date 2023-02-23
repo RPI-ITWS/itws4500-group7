@@ -14,8 +14,6 @@ function App() {
     <div className="App">
       <h2> 1: Set your time <br/>2: Press Start to begin the matching game! </h2>
       <TimeForm />
-      <ColorBars/>
-      
     </div>
   );
 }

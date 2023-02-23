@@ -6,6 +6,11 @@ const ColorBars = () => {
     const [value3, setValue3] = useState(128);
     const MAX = 255;
 
+    const getValues = () => {
+        return ("#" + Number(value1).toString(16)
+        + Number(value2).toString(16) + Number(value3).toString(16)); //fix this
+    }
+
     const getBackgroundSize = (color) => {
         if(color === "red") {
             return {
