@@ -58,5 +58,9 @@ h4{
     width:40px;
     height:40px;
   }
-  
-  
+
+
+.accordion{
+    height: 400px; /* Set a fixed height for the container */
+    overflow-y: scroll; /* Add a vertical scrollbar */
+}
