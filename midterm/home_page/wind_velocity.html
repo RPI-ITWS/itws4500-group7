@@ -42,109 +42,28 @@
 
     <!-- CONTENT -->
     <div class="container">
-        <!-- MAIN IMAGE -->
         <div class="row">
-            <div class=".col-xl-4">
-                <img id="vast" src="./resources/vast_image.png">
+            <h1 class="card-title">Wind Velocity Data</h1>
+        </div>
+        <div class="row">
+            <div class="card w-90">
+                <div id="windDisplay">
+                    <img src="./resources/windVelPics/1.JPG" width="1000" height="500" class="d-inline-block align-top" alt=""/>
+                </div>
+                <h5 class="card-title" id="windDate">1/2022</h5>
             </div>
+        
         </div>
         <!-- CARDS -->
         <div clas="row">
-            <div class="card w-90">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title">OUR MISSION</h5>
-                            <p class="card-text">VAST's goal is to create an easy-to-naviagte application for 
-                                accessing satellite data and educational resources about renewable energy 
-                                within the state of New York.
-                            </p>
-                            <a href="our_mission.html" class="btn btn-primary">FIND OUT MORE</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <img class="image" src="./resources/our_mission.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div clas="row">
-            <div class="card w-90">
-                <div class="row">
-                    <div class="col">
-                        <img class="image" src="./resources/surface_temp.jpg">
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title">SURFACE TEMPATURE DATA</h5>
-                            <p class="card-text">See the changes of the surface tempature within the state
-                                of New York, pulled directly from NASA's own satellites.
-                            </p>
-                            <a href="surface_tempature.html" class="btn btn-primary">FIND OUT MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div clas="row">
-            <div class="card w-90">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title">WIND VELOCITY DATA</h5>
-                            <p class="card-text">See the changes of the wind velocity within the state
-                                of New York, pulled directly from NASA's own satellites.
-                            </p>
-                            <a href="wind_velocity.html" class="btn btn-primary">FIND OUT MORE</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <img class="image" src="./resources/wind_velocity.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div clas="row">
-            <div class="card w-90">
-                <div class="row">
-                    <div class="col">
-                        <img class="image" src="./resources/giovanni_logo.png">
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title">EDUCATIONAL RESOURCES</h5>
-                            <p class="card-text"> We provide educational animations and materials for all 
-                                ages! Check out our interactive learning experience on why we should care 
-                                about renewable energy.
-                            </p>
-                            <a href="educational_resources.html" class="btn btn-primary">FIND OUT MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div clas="row">
-            <div class="card w-90">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title">ABOUT US</h5>
-                            <p class="card-text"> Meet the team behind VAST! Information Technology 
-                                and Web Science students at Rensselaer Polytechnic 
-                                Institute.
-                            </p>
-                            <a href="wind_velocity.html" class="btn btn-primary">FIND OUT MORE</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <img class="image" src="./resources/rpi.jpg">
-                    </div>
-                </div>
-            </div>
+            <input
+            type="range"
+            min="1"
+            max="12"
+            value="0"
+            id="windSlider"
+            onchange="switchWindImage(); return false;"
+        />
         </div>
     </div>
     <br>
