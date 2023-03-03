@@ -4,7 +4,7 @@ h4{
 }
 
 body{
-    background-image: url(./images/background.jpg);
+    background-image: url(../public/images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 20px;
