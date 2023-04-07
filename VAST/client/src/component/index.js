@@ -1,9 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './App.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import Footer from './footer'
 const vastImage = require("./resources/vast_image.png");
 const mission = require("./resources/our_mission.jpg");
 const sTemp = require("./resources/surface_temp.jpg");
@@ -17,7 +17,7 @@ export default function Index() {
             <div className="container">
                 <div className="row">
                     <div className=".col-xl-4">
-                        <img id="vast" src={vastImage} />
+                        <img id="vast" src={vastImage} alt="vast large logo"/>
                     </div>
                 </div>
                 <div className="row">
@@ -30,11 +30,11 @@ export default function Index() {
                                         accessing satellite data and educational resources about renewable energy
                                         within the state of New York.
                                     </p>
-                                    <a href={"our_mission.html"} className="btn btn-primary">FIND OUT MORE</a>
+                                    <NavLink className="btn btn-primary" to="/ourMission">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                             <div className="col">
-                                <img className="image" src={mission} />
+                                <img className="image" src={mission} alt="mission page link"/>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function Index() {
                     <div className="card w-90">
                         <div className="row">
                             <div className="col">
-                                <img className="image" src={sTemp} />
+                                <img className="image" src={sTemp} alt="surface temperature data link"/>
                             </div>
                             <div className="col">
                                 <div className="card-body">
@@ -52,7 +52,7 @@ export default function Index() {
                                     <p className="card-text">See the changes of the surface tempature within the state
                                         of New York, pulled directly from NASA's own satellites.
                                     </p>
-                                    <a href={"surface_tempature.html"} className="btn btn-primary">FIND OUT MORE</a>
+                                    <NavLink className="btn btn-primary" to="/surfaceTemp">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -68,11 +68,11 @@ export default function Index() {
                                     <p className="card-text">See the changes of the wind velocity within the state
                                         of New York, pulled directly from NASA's own satellites.
                                     </p>
-                                    <a href={"wind_velocity.html"} className="btn btn-primary">FIND OUT MORE</a>
+                                    <NavLink className="btn btn-primary" to="/windVel">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                             <div className="col">
-                                <img className="image" src={wVel} />
+                                <img className="image" src={wVel} alt="wind velocity data link"/>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export default function Index() {
                     <div className="card w-90">
                         <div className="row">
                             <div className="col">
-                                <img className="image" src={gio} />
+                                <img className="image" src={gio} alt="other educational resources link"/>
                             </div>
                             <div className="col">
                                 <div className="card-body">
@@ -91,7 +91,7 @@ export default function Index() {
                                         ages! Check out our interactive learning experience on why we should care
                                         about renewable energy.
                                     </p>
-                                    <a href={"educational_resources.html"} className="btn btn-primary">FIND OUT MORE</a>
+                                    <NavLink className="btn btn-primary" to="/educationalResources">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -108,17 +108,16 @@ export default function Index() {
                                         and Web Science students at Rensselaer Polytechnic
                                         Institute.
                                     </p>
-                                    <a href={"about_us.html"} className="btn btn-primary">FIND OUT MORE</a>
+                                    <NavLink className="btn btn-primary" to="/aboutUs">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                             <div className="col">
-                                <img className="image" src={rpi} />
+                                <img className="image" src={rpi} alt="link to about us page"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

@@ -23,23 +23,23 @@ export default function Footer() {
                     <div className="container p-2 pb-0">
                         <section className="mb-2">
                             <a href={"https://www.facebook.com/NASA"}>
-                                <img className="icon" src={facebook} />
+                                <img className="icon" src={facebook} alt="facebook link"/>
                             </a>
 
                             <a href={"https://twitter.com/NASA"}>
-                                <img className="icon" src={twitter} style={{ height: "30px" }} />
+                                <img className="icon" src={twitter} style={{ height: "30px" }} alt="twitter link"/>
                             </a>
 
                             <a href={"https://www.instagram.com/nasa/?next=%2F"}>
-                                <img className="icon" src={insta} style={{ width: "55px" }} />
+                                <img className="icon" src={insta} style={{ width: "55px" }} alt="instagram link"/>
                             </a>
 
                             <a href="https://www.linkedin.com/company/nasa">
-                                <img className="icon" src={linkedIn} style={{ height: "30px", width: "30px" }} />
+                                <img className="icon" src={linkedIn} style={{ height: "30px", width: "30px" }} alt="NASA linked in"/>
                             </a>
 
                             <a href="https://www.nasa.gov/">
-                                <img className="icon" src={nasa} />
+                                <img className="icon" src={nasa} alt="NASA homepage link"/>
                             </a>
                         </section>
                     </div>
