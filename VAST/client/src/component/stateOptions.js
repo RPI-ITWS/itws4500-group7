@@ -1,15 +1,34 @@
-import React, { Component } from "react";
+import React, { useEffect, useState, Component } from "react";
 
-export default class StateOptions extends Component {
-    render() {
-        const records = this.props.records;
-        console.log(records);
-        return records.map((record, i) => {
-            return (
-                <option
-                    value={i + 1}
-                >{record.name}</option>
-            );
-        })
-    };
+export default function StateOptions() {
+    const [records, setRecords] = useState([]);
+
+    // This method fetches the records from the database.
+    useEffect(() => {
+        async function getRecords() {
+            const response = await fetch(`http://localhost:3000/api/windVel`);
+
+            if (!response.ok) {
+                const message = `An error occurred: ${response.statusText}`;
+                window.alert(message);
+                return;
+            }
+
+            const records = await response.json();
+            setRecords(records[0].states);
+        }
+
+        getRecords();
+
+        return;
+    }, [records.length]);
+
+    //const records = this.props.records;
+    return records.map((record, i) => {
+        return (
+            <option
+                value={i + 1}
+            >{record.name}</option>
+        );
+    })
 }
