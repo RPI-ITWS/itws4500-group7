@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import StateOptions from "./stateOptions";
 
 export default function SelectState() {
     const [records, setRecords] = useState([]);
@@ -23,7 +24,8 @@ export default function SelectState() {
             }
 
             const records = await response.json();
-            setRecords(records);
+            console.log(records[0].states);
+            setRecords(records[0].states);
         }
 
         getRecords();
@@ -50,6 +52,18 @@ export default function SelectState() {
         //navigate("/");
     }
 
+    function getStates() {
+        console.log(records);
+        return records.map((record, i) => {
+            return (
+                <option
+                    value={i + 1}
+                >{record.name}</option>
+            );
+        }
+        )
+    }
+
     // This following section will display the form that takes the input from the user.
     return (
         <div>
@@ -64,18 +78,7 @@ export default function SelectState() {
                         onChange={(e) => updateForm({ api: e.target.value })}
                     >
                         <option value="0">Select</option>
-                        {() => {
-                            var i = 0;
-                            console.log(records);
-                            return records.map((record) => {
-                                console.log(record);
-                                return (
-                                    <option
-                                        value={i++}
-                                    >{record[0].states[i-1].name}</option>
-                                );
-                            });
-                        }}
+                        <StateOptions records={records}/>
                     </select>
                 </div>
                 <br />
