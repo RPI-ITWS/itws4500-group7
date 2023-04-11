@@ -10,6 +10,7 @@ import OurMission from "./component/our_mission";
 import AboutUs from "./component/about_us";
 import WindVel from './component/windVel';
 import SurfaceTemp from './component/surfaceTemp';
+import SelectState from './component/selectState';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/windVel" element={<WindVel />} />
         <Route path="/surfaceTemp" element={<SurfaceTemp />} />
-        <Route path="/educationalResources" element={<OurMission />} />
+        <Route path="/educationalResources" element={<SelectState />} />
       </Routes>
       <Footer />
     </div>
