@@ -51,3 +51,25 @@ app.get('/api/windVel', async function (req, res) {
     //console.log(dbArr);
     res.status(200).send(dbArr);
 });
+
+// This section will help you get a list of all the records.
+app.get('/api/windVel/:stateID', async function (req, res) {
+    const state_id = req.params["stateID"];
+    // get stateID from req req.params
+    // use :stateID to query database.
+    await client.connect();
+    let db_connect = client.db("VAST").collection("windVel");
+    db_connect.findOne({_id:"monthlyWindAvg"})
+    .then((data) => {
+        for (let i = 0; i < data.states.length; i++) {
+            if (data.states[i].name === state_id) {
+                return res.status(200).send(data.states[i].data);
+            }
+        }
+
+        return res.sendStatus(404);
+    })
+    .catch((err) => {
+      return res.sendStatus(500);
+    });
+});
