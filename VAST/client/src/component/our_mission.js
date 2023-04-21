@@ -18,10 +18,10 @@ export default function OurMission() {
             <p id="mainContent">At VAST, we want to not only provide relevant scientific data, but also strive to
                 provide the education and understanding behind why the data we display is so important.
                 Our application looks at a small subset of data provided from NASA's satellites, which includes both
-                surface temperature and wind velocity data within the state of New York. Our goal is to present this
+                surface temperature and wind velocity data across the entire United States of America. Our goal is to present this
                 data in an easy to understand fashion so that educators have all the information they need ready,
                 along with interactive, pre-built data visulations, which can create discussions with students.
-                Data should be presented in such a way that users can draw their conclusions from the set of data
+                Data should be presented in such a way that users can draw their own conclusions,
                 such as where the best location to place renewable energy sources would be or what type of renewable
                 energy should be used in a given area.
             </p>

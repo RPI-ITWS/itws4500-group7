@@ -17,7 +17,7 @@ export default function AboutUs() {
             <br />
             <div className="container">
                 <div className="text-center">
-                    <p id="mainContent"> The VAST team is composed of dedicated college students currenlty studying at Rensselaer Polytechnic Inistitue, pusuring an undergraduate degree
+                    <p id="mainContent"> The VAST team is composed of dedicated college students currenlty studying at Rensselaer Polytechnic Inistitue, pursuing an undergraduate degree
                         in Information Technology and Web Science. We are each passionate about protecting our environment, and are contributing to
                         the fight against global warming in the way we know best; computer science and programming. Thanks to the help of our
                         outstanding professors and NASA's assistance in providing imperative data, we are able to create an application that educates

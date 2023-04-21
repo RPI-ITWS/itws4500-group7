@@ -28,7 +28,7 @@ export default function Index() {
                                     <h5 className="card-title">OUR MISSION</h5>
                                     <p className="card-text">VAST's goal is to create an easy-to-naviagte application for
                                         accessing satellite data and educational resources about renewable energy
-                                        within the state of New York.
+                                        across the entire United States.
                                     </p>
                                     <NavLink className="btn btn-primary" to="/ourMission">FIND OUT MORE</NavLink>
                                 </div>
@@ -49,8 +49,8 @@ export default function Index() {
                             <div className="col">
                                 <div className="card-body">
                                     <h5 className="card-title">SURFACE TEMPATURE DATA</h5>
-                                    <p className="card-text">See the changes of the surface tempature within the state
-                                        of New York, pulled directly from NASA's own satellites.
+                                    <p className="card-text">See the changes of the surface tempature within the United 
+                                    States, pulled directly from NASA's own satellites.
                                     </p>
                                     <NavLink className="btn btn-primary" to="/surfaceTemp">FIND OUT MORE</NavLink>
                                 </div>
@@ -65,8 +65,8 @@ export default function Index() {
                             <div className="col">
                                 <div className="card-body">
                                     <h5 className="card-title">WIND VELOCITY DATA</h5>
-                                    <p className="card-text">See the changes of the wind velocity within the state
-                                        of New York, pulled directly from NASA's own satellites.
+                                    <p className="card-text">See the changes of the wind velocity within the United States, 
+                                    pulled directly from NASA's own satellites.
                                     </p>
                                     <NavLink className="btn btn-primary" to="/windVel">FIND OUT MORE</NavLink>
                                 </div>
@@ -87,9 +87,9 @@ export default function Index() {
                             <div className="col">
                                 <div className="card-body">
                                     <h5 className="card-title">EDUCATIONAL RESOURCES</h5>
-                                    <p className="card-text"> We provide educational animations and materials for all
-                                        ages! Check out our interactive learning experience on why we should care
-                                        about renewable energy.
+                                    <p className="card-text"> We provide interactive visualizations and materials for all
+                                        ages! Check out our learning experience and decide where the best location for 
+                                        renewable energy may be.
                                     </p>
                                     <NavLink className="btn btn-primary" to="/educationalResources">FIND OUT MORE</NavLink>
                                 </div>
