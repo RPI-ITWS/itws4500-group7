@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import StateOptions from "./stateOptions";
 
-
 export default function SelectState() {
     const [form, setForm] = useState({state: "0"});
     const navigate = useNavigate();
