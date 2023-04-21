@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import StateOptions from "./stateOptions";
 
+
 export default function SelectState() {
     const [form, setForm] = useState({state: "0"});
     const navigate = useNavigate();
@@ -23,6 +24,9 @@ export default function SelectState() {
 
         //setForm({ name: "", title: "", born: "", api: "0" });
         //navigate("/");
+
+        navigate("/windVel/" + newPerson.state)
+
     }
 
     // This following section will display the form that takes the input from the user.
