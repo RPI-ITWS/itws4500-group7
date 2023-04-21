@@ -27,7 +27,7 @@ export default function StateOptions() {
     return records.map((record, i) => {
         return (
             <option
-                value={i + 1}
+                value={record.name}
             >{record.name}</option>
         );
     })
