@@ -4,8 +4,6 @@ import { Bar } from 'react-chartjs-2';
 import { defaults, Chart } from 'chart.js'
 
 defaults.font.size = 30;
-// chart.defaults.font.color = ;
-defaults.font.color = "blue";
 Chart.defaults.color = "black";
 
 const WindVel = () => {

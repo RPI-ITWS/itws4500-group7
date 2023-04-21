@@ -73,3 +73,23 @@ app.get('/api/windVel/:stateID', async function (req, res) {
       return res.sendStatus(500);
     });
 });
+
+// This section will help you get a list of all the records.
+app.get('/api/surfaceTemp/:stateID', async function (req, res) {
+    const state_id = req.params["stateID"];
+    await client.connect();
+    let db_connect = client.db("VAST").collection("surfaceTemp");
+    db_connect.findOne({_id:"monthlyStAvg"})
+    .then((data) => {
+        for (let i = 0; i < data.states.length; i++) {
+            if (data.states[i].name === state_id) {
+                return res.status(200).send(data.states[i].data);
+            }
+        }
+
+        return res.sendStatus(404);
+    })
+    .catch((err) => {
+      return res.sendStatus(500);
+    });
+});
