@@ -9,3 +9,10 @@ html,
 body {
     background: black;
 }
+
+h2{
+    font-family: 'Gruppo', cursive;
+    font-weight: bolder;
+    color: white;
+    font-style: italic;
+}

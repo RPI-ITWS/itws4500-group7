@@ -3,9 +3,10 @@ import * as d3 from 'd3';
 //import * as d3_3d from 'd3-3d';
 import { _3d } from 'd3-3d';
 import { event as curEvent } from 'd3-selection';
+import USA from "./resources/redUSMap2.jpg";
 //import { drag } from 'd3-drag';
 
-export default function Plot({ data, alpha, beta }) {
+export default function Plot({ data, beta }) {
     const [points, setPoints] = useState([]);
     const svgRef = useRef();
 
@@ -20,9 +21,9 @@ export default function Plot({ data, alpha, beta }) {
         .y((d) => d.y)
         .z((d) => d.z)
         .origin(origin)
-        .rotateY(alpha)
-        .rotateX(-startAngle)
-        .rotateZ(beta);
+        .rotateY(2 * startAngle)
+        .rotateX(beta)
+        .rotateZ(0);
 
     const color = d3.scaleLinear();
 
@@ -69,13 +70,13 @@ export default function Plot({ data, alpha, beta }) {
 
         color.domain([yMin, yMax]);
         setPoints(newPoints);
-        processData(surface(newPoints), 150);
+        processData(surface(newPoints), 15);
     }
 
     function change() {
         const eq = (x, z) => {
             if (data.length > 0 && z < 51 && x < 94) {
-                return parseFloat(data[z][x]);
+                return parseFloat(5 * data[z][x]);
             } else {
                 return 0;
             }
@@ -87,20 +88,27 @@ export default function Plot({ data, alpha, beta }) {
     useEffect(() => {
         const svg = d3.select(svgRef.current)
             .attr("width", 1000)
-            .attr("height", 500)
+            .attr("height", 500);
         svg.append("g");
+        /*
+        if (Math.round(beta, 2) == Math.round(-Math.PI / 2), 2) {
+            svg.append('svg:image').attr("xlink:href", USA)
+                .attr("width", 470)
+                .attr("height", 255)
+                .attr("x", 94)
+                .attr("y", 51)
+                .style("pointer-events", "none")
+                .style("z-index", 1)
+        } else {
+            const image = svg.select("svg:image");
+            if (!image.empty()) {
+                image.remove();
+            }
+        }
+        */
 
-        const surface = _3d()
-            .shape('SURFACE', j * 2)
-            .scale(5)
-            .x((d) => d.x)
-            .y((d) => d.y)
-            .z((d) => d.z)
-            .origin(origin)
-            .rotateY(alpha)
-            .rotateX(-startAngle)
-            .rotateZ(beta);
-    }, [alpha, beta]);
+        surface.rotateX(beta);
+    }, [beta]);
 
     useEffect(() => {
         change();
