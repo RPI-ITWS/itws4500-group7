@@ -5,8 +5,7 @@
     "mongodb": "^5.2.0"
   },
   "devDependencies": {
-    "d3-3d": "^0.1.2",
-    "vite": "^4.3.2"
+    "d3-3d": "^0.1.2"
   },
   "homepage": "/node/"
 }
