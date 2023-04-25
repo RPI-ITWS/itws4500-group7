@@ -21,7 +21,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview",
+    "serve": "node ../server.js"
   }
   ,
   "eslintConfig": {
