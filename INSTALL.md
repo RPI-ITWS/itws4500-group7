@@ -10,7 +10,6 @@ npm install react-bootstrap
 npm install react-chartjs-2
 npm install react-dom
 npm install react-scripts
-npm install web-vitals
 npm install d3
 npm install d3-3d@0.1.2
 
