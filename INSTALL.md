@@ -1,3 +1,9 @@
+URL: https://cybercrusaders.eastus.cloudapp.azure.com/node/
+
+Start Server:
+From /var/www/html/itws4500-group7/VAST folder:
+node server.js
+
 Packages installed:
 npm install cors
 npm install express
@@ -13,10 +19,3 @@ npm install react-router-dom
 npm install react-scripts
 npm install d3
 npm install d3-3d@0.1.2
-
-Compiling
-From VAST folder:
-cd client
-npm run build
-cd ..
-node server.js
