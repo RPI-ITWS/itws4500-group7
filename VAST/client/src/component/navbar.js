@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
 
-            <NavLink className="navbar-brand" to="/">
+            <NavLink className="navbar-brand" to="/node/">
                 <img src={logo} width={"32"} height={"32"} className="d-inline-block align-top" alt="Logo" />
                 VAST
             </NavLink>
