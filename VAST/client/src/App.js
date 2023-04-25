@@ -47,6 +47,15 @@ function App() {
         <Route path="/surfaceTemp/:stateID" element={<SurfaceTemp />} />
         <Route path="/surfaceTemp" element={<SelectStateTemp />} />
         <Route path="/educationalResources" element={<Contour />} />
+
+        <Route exact path="/node/" element={<Index />} />
+        <Route path="/node/ourMission" element={<OurMission />} />
+        <Route path="/node/aboutUs" element={<AboutUs />} />
+        <Route path="/node/windVel/:stateID" element={<WindVel />} />
+        <Route path="/node/windVel" element={<SelectState />} />
+        <Route path="/node/surfaceTemp/:stateID" element={<SurfaceTemp />} />
+        <Route path="/node/surfaceTemp" element={<SelectStateTemp />} />
+        <Route path="/node/educationalResources" element={<Contour />} />
       </Routes>
       <Footer />
     </div>
