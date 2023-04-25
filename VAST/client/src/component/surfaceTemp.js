@@ -15,7 +15,7 @@ const SurfaceTemp = () => {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   
   useEffect(() => {
-    fetch('http://cybercrusaders.eastus.cloudapp.azure.com/node/api/surfaceTemp/' + stateID)
+    fetch('https://cybercrusaders.eastus.cloudapp.azure.com/node/api/surfaceTemp/' + stateID)
     .then(response => response.json())
     .then(res => {
       setRecords(res);

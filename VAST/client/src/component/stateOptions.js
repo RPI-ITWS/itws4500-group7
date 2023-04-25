@@ -6,7 +6,7 @@ export default function StateOptions() {
     // This method fetches the records from the database.
     useEffect(() => {
         async function getRecords() {
-            const response = await fetch(`http://cybercrusaders.eastus.cloudapp.azure.com/node/api/windVel`);
+            const response = await fetch(`https://cybercrusaders.eastus.cloudapp.azure.com/node/api/windVel`);
 
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;

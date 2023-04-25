@@ -15,7 +15,7 @@ const WindVel = () => {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   
   useEffect(() => {
-    fetch('http://cybercrusaders.eastus.cloudapp.azure.com/node/api/windVel/' + stateID)
+    fetch('https://cybercrusaders.eastus.cloudapp.azure.com/node/api/windVel/' + stateID)
     .then(response => response.json())
     .then(res => {
       setRecords(res);
