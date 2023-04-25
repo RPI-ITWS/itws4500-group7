@@ -30,7 +30,7 @@ export default function Index() {
                                         accessing satellite data and educational resources about renewable energy
                                         across the entire United States.
                                     </p>
-                                    <NavLink className="btn btn-primary" to="/ourMission">FIND OUT MORE</NavLink>
+                                    <NavLink className="btn btn-primary" to="/node/ourMission">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                             <div className="col">
@@ -52,7 +52,7 @@ export default function Index() {
                                     <p className="card-text">See the changes of the surface tempature within the United 
                                     States, pulled directly from NASA's own satellites.
                                     </p>
-                                    <NavLink className="btn btn-primary" to="/surfaceTemp">FIND OUT MORE</NavLink>
+                                    <NavLink className="btn btn-primary" to="/node/surfaceTemp">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function Index() {
                                     <p className="card-text">See the changes of the wind velocity within the United States, 
                                     pulled directly from NASA's own satellites.
                                     </p>
-                                    <NavLink className="btn btn-primary" to="/windVel">FIND OUT MORE</NavLink>
+                                    <NavLink className="btn btn-primary" to="/node/windVel">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                             <div className="col">
@@ -91,7 +91,7 @@ export default function Index() {
                                         ages! Check out our learning experience and decide where the best location for 
                                         renewable energy may be.
                                     </p>
-                                    <NavLink className="btn btn-primary" to="/educationalResources">FIND OUT MORE</NavLink>
+                                    <NavLink className="btn btn-primary" to="/node/educationalResources">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@ export default function Index() {
                                         and Web Science students at Rensselaer Polytechnic
                                         Institute.
                                     </p>
-                                    <NavLink className="btn btn-primary" to="/aboutUs">FIND OUT MORE</NavLink>
+                                    <NavLink className="btn btn-primary" to="/node/aboutUs">FIND OUT MORE</NavLink>
                                 </div>
                             </div>
                             <div className="col">

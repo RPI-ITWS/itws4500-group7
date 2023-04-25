@@ -12,7 +12,7 @@ export default function Contour() {
     const prevMonthRef = useRef();
     useEffect(() => {
         async function getRecords() {
-            const response = await fetch(`http://localhost:3000/api/windVel`);
+            const response = await fetch(`http://cybercrusaders.eastus.cloudapp.azure.com/node/api/windVel`);
 
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;

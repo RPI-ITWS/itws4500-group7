@@ -22,12 +22,12 @@ export default function Navbar() {
                         MENU
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="dropdown-menu" id="dropdown">
-                        <NavLink className="dropdown-item" to="/">Home</NavLink>
-                        <NavLink className="dropdown-item" to="/ourMission">Our Mission</NavLink>
-                        <NavLink className="dropdown-item" to="/surfaceTemp">Surface Tempature Data</NavLink>
-                        <NavLink className="dropdown-item" to="/windVel">Wind Velocity Data</NavLink>
-                        <NavLink className="dropdown-item" to="/educationalResources">Educational Resources</NavLink>
-                        <NavLink className="dropdown-item" to="/aboutUs">About Us</NavLink>
+                        <NavLink className="dropdown-item" to="/node/">Home</NavLink>
+                        <NavLink className="dropdown-item" to="/node/ourMission">Our Mission</NavLink>
+                        <NavLink className="dropdown-item" to="/node/surfaceTemp">Surface Tempature Data</NavLink>
+                        <NavLink className="dropdown-item" to="/node/windVel">Wind Velocity Data</NavLink>
+                        <NavLink className="dropdown-item" to="/node/educationalResources">Educational Resources</NavLink>
+                        <NavLink className="dropdown-item" to="/node/aboutUs">About Us</NavLink>
                     </Dropdown.Menu>
                 </Dropdown>
             </span>
