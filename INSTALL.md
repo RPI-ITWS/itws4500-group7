@@ -9,6 +9,7 @@ npm install react
 npm install react-bootstrap
 npm install react-chartjs-2
 npm install react-dom
+npm install react-router-dom
 npm install react-scripts
 npm install d3
 npm install d3-3d@0.1.2
