@@ -2,6 +2,7 @@
     text-align: center;
     color: white;
     font-size: 5em;
+    margin:auto;
 }
 
 #mainContent {
@@ -10,4 +11,5 @@
     padding: 2% 10%;
     font-size: 2em;
     color: wheat;
+    margin:auto;
 }
