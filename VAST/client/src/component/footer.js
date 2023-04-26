@@ -18,7 +18,7 @@ export default function Footer() {
             <br />
             <br />
             <br />
-            <div className="fixed-bottom">
+            <div className="fixed-bottom" style={{position: "sticky"}}>
                 <footer className="bg-dark text-center text-white" style={{ fontSize: "12px" }}>
                     <div className="container p-2 pb-0">
                         <section className="mb-2">
